@@ -1,0 +1,375 @@
+@font-face{
+    font-family:'Montserrat';
+    src:url("Montserrat/Montserrat-Italic.ttf") format('ttf');
+
+}
+body{
+
+    margin:0;
+    font-family: 'Montserrat';
+}
+
+.intro{
+    max-height:70vh;
+    overflow:hidden;
+    position:relative;
+}
+
+.intro:after{
+    content:"";
+    display:block;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0, 0.7);
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:20;
+
+}
+.intro_content{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width:100%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:30;
+}
+.intro_title{
+    margin-top: 80px;
+    font-size:30px;
+    color:#fff;
+    text-align: center;  
+}
+.intro_title1{
+    margin:0;
+    font-size:20px;
+    color:#fff;
+    text-align: left;  
+}
+.intro_par{
+    margin:0;
+    font-size:10px;
+    color:#fff;
+    text-align: center;
+    
+}
+.intro_par1{
+    margin:0;
+    font-size:10px;
+    color:#fff;
+    text-align: left;
+    
+}
+.header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:50;
+}
+.header_burger{
+    z-index:0;
+}
+
+.header:before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:transparent ;
+}
+.header_body{
+    position:relative;
+    z-index:4;
+    display:flex;
+    justify-content:center;
+    height:90px;
+    align-items:center;
+}
+
+.header_list{
+    margin-bottom: 0;
+    display:flex;
+    align-items:center;
+}
+.header_list > li{
+    list-style:none;
+    margin:0px 0px 0px 20px;
+}
+.header_list > li:hover .menu_sub-list{
+    opacity:1;
+    visibility: visible;
+    transform: (0px,0px);
+    pointer-events: all;
+}
+.header_link{
+    color:#fff;
+    text-transform:uppercase;
+    font-size:8px;
+    text-decoration:none;
+}
+.header_link:hover{
+text-decoration: underline;
+color:#ff9500;
+}
+.header_sub-link:hover{
+    text-decoration: underline;
+    color:#ff9500;
+    }
+
+.menu_sub-list{
+    position:absolute;
+    background-color:#000;
+    padding:15px;
+    min-width:200px;
+    opacity:0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.header_sub-link{
+    text-decoration:none;
+    color:#fff
+
+}
+.menu_sub-list li{
+    margin:0px,0px,10px,0px;
+}
+.video{
+    position:relative;
+    padding-bottom: 56%;
+}
+.video_media{
+    width:100%;
+    height:auto;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.button1{
+    margin-top: 20px;
+    margin-left:110px;
+    display: inline-block;
+    width: 200px;
+    padding: 8px;
+    color: #ff9500;
+    border: 1px solid #ff9500;
+    border-radius: 5px;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+}
+.button1:hover,
+.button1:active {
+  background-color: #ff9500;
+  color: #000;
+}
+
+.vl1{
+    width:170px;
+    margin-left: 10px;
+    border-left: 4px solid #ff9500;
+    height:80px;
+    padding-left: 10px;
+    margin-top:30px;
+}
+
+
+.cup{
+    height:25px;
+    width:25px;
+
+}
+@media  (max-width:800px){
+    .intro{
+        max-height:70vh;
+        overflow:hidden;
+        position:relative;
+    }
+
+
+    .intro:after{
+        content:"";
+        display:block;
+        width:100%;
+        height:100%;
+        background-color: rgba(0,0,0, 0.7);
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:2;
+    
+    }
+    .intro_content{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        width:100%;
+        height: 100%;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:3;
+    }
+    .intro_title{
+        margin-top: 20px;
+        font-size:30px;
+        color:#fff;
+        text-align: center;  
+        z-index:5;
+    }
+    .intro_title1{
+        margin:0;
+        font-size:20px;
+        color:#fff;
+        text-align: left;  
+        z-index:5;
+    }
+    .intro_par{
+        margin:0;
+        font-size:15px;
+        color:#fff;
+        text-align: center;
+        
+    }
+    .intro_par1{
+        margin:0;
+        font-size:15px;
+        color:#fff;
+        text-align: left;
+        
+    }
+    .header{
+        position:fixed;
+        width:100%;
+        top:544px;
+        left:0;
+        z-index:50;
+    }
+    .header:before{
+        content:'';
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background-color:#000;
+        z-index:4;
+    }
+    .header_body{
+        position:relative;
+        display:flex;
+        justify-content:center;
+        height:90px;
+        align-items:center;
+    }
+    .header_burger{
+        display:block;
+        position:relative;
+        width:30px;
+        height:20px;
+        z-index:5;
+    }
+    .header_menu{
+        
+        position:fixed;
+        top:-100%;
+        left:0;
+        width:100%;
+        height:100%;
+        background-color: #000; 
+        padding:70px 10px 20px 10px;  
+    }
+    .header_menu.active{
+        top:0;
+    }
+    .header_logo{
+        position:relative;
+        z-index:5;
+    }
+    .header_burger span{
+        position:absolute;
+        background-color: #fff;
+        width:100%;
+        height:2px;
+        left:0;
+        top:9px;
+    }
+    .header_burger:before,
+    .header_burger:after{
+        content:'';
+        background-color: #fff;
+        position:absolute;
+        width:100%;
+        height:2px;
+        left:0;
+    }
+    .header_burger:before{
+        top:0;
+    }
+    .header_burger:after{
+        bottom:0;
+    }
+    .header_list{
+        display:block;
+    }
+    .header_list >li{
+        margin:0px 0px 20px 0px;
+    }
+    
+    .header_link{
+        color:#fff;
+        text-transform:uppercase;
+        font-size:10px;
+        text-decoration:none;
+    }
+
+    .video{
+        padding-bottom: 150%;
+    }
+    .video_media{
+        height:100%;
+        width:800px;
+        object-fit:cover;
+    }
+
+    .button1{
+        margin-left: 90px;
+        display: inline-block;
+        width: 200px;
+        padding: 8px;
+        color: #ff9500;
+        border: 1px solid #ff9500;
+        border-radius: 5px;
+        text-align: center;
+        outline: none;
+        text-decoration: none;
+    }
+    .button1:hover,
+    .button1:active {
+      background-color: #ff9500;
+      color: #000;
+    }
+    
+    .vl1{
+        width:160px;
+        margin-left: 20px;
+        border-left: 4px solid #ff9500;
+        height:100px;
+        padding-left: 10px;
+        margin-top:10px;
+    }
+    
+    
+    .cup{
+        height:25px;
+        width:25px;
+    
+    }
+}
