@@ -16,6 +16,123 @@ $(document).ready(function(){
         speed:1000,
     });
 });
+$(document).ready(function(){
+    $('.slider2').slick({
+        arrows:false,
+        dots:false,
+        adaptiveHeight:false,
+        slidesToShow: 5,
+        slidesToScroll:1,
+        speed:2000,
+        autoplay:true,
+        autoplaySpeed:2000,
+        centerMode: true,
+        centerPadding: '140px',
+        responsive:[
+            {
+                breakpoint:768,
+                settings:{
+                    slidesToShow:1,
+                    centerPadding: '80px'
+                }
+            }
+        ]
+    });
+});
+$(document).ready(function(){
+    $('.slider3').slick({
+        arrows:false,
+        dots:false,
+        adaptiveHeight:false,
+        slidesToShow: 5,
+        slidesToScroll:1,
+        speed:2000,
+        autoplay:true,
+        autoplaySpeed:2000,
+        centerMode: true,
+        centerPadding: '0px',
+        responsive:[
+            {
+                breakpoint:768,
+                settings:{
+                    slidesToShow:2,
+                    centerPadding: '0px'
+                }
+            }
+        ]
+    });
+});
+const form=document.getElementById('form');
+form.addEventListener('submit', formSend);
+async function formSend(e){
+    e.preventDefault();
+    let error =formValidate(form);
+    let formData = new FormData(form);
+    if (error===0){
+        let response=await fetch('https://formcarry.com/s/zOWGYg-Ual',{
+            method:'POST',
+            body:formData
+        });
+        if (response.ok){
+            let result =await response.json();
+            alert(result.message);
+            form.reset();
+        }
+        else{
+            alert('Ошибка')
+        }
+    }
+    else {
+        alert('Заполните обязательные поля');
+    }
+
+}
+function formValidate(form){
+    let error=0;
+    let formReq=document.querySelectorAll('._req');
+    for (let index=0; index< formReq.length;index++){
+        const input= formReq[index];
+        formRemoveError(input);
+        if(input.classList.contains("_email")){
+            if(emailTest(input)){
+                formAddError(input);
+                error++;
+            }
+        }
+        else if(input.classList.contains("_tel")){
+            if(telTest(input)){
+                formAddError(input);
+                error++;
+            }
+
+        }
+        else if(input.getAttribute("type")==="checkbox" && input.checked===false){
+            formAddError(input);
+                error++;
+        }
+        else{
+            if (input.value===''){
+                formAddError(input);
+                error++;
+            }
+        }
+    }
+    return error;
+}
+function emailTest(input){
+    return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+}
+function telTest(input){
+    return !/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(input.value);
+}
+function formAddError(input){
+    input.parentElement.classList.add('_error');
+    input.classList.add('_error');
+}
+function formRemoveError(input){
+    input.parentElement.classList.remove('_error');
+    input.classList.remove('_error');
+}
 const isMobile={
     Android:function(){
         return navigator.userAgent.match(/Android/i);
@@ -60,4 +177,5 @@ if (isMobile.any()){
 else{
     document.body.classList.add('_pc');
 }
+
 });
