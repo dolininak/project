@@ -1,9 +1,21 @@
+window.addEventListener('DOMContentLoaded', function (event) {
+    console.log("DOM fully loaded and parsed");
 $(document).ready(function(){
     $('.header_burger').click(function(event){
         $('.header_burger,.header_menu').toggleClass('active');
     });
+   
 });
-
+$(document).ready(function(){
+    $('.slider').slick({
+        arrows:true,
+        dots:false,
+        adaptiveHeight:false,
+        slidesToShow:1,
+        slidesToScroll:1,
+        speed:1000,
+    });
+});
 const isMobile={
     Android:function(){
         return navigator.userAgent.match(/Android/i);
@@ -48,3 +60,4 @@ if (isMobile.any()){
 else{
     document.body.classList.add('_pc');
 }
+});
