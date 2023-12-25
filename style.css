@@ -400,10 +400,11 @@ body._touch .menu_arrow{
     
     details {
     background-color: #ffffff;
-    border: 2px solid #ff0000;
+    
     border-radius: 4px;
-    padding: 0.5em;
-    margin-bottom: 1em;
+    padding:0em;
+    padding-left: 0.5em;
+    margin-bottom: 0em;
     }
     
     summary {
@@ -414,9 +415,11 @@ body._touch .menu_arrow{
     
     details[open] {
     background-color: #ffffff;
+    border: 2px solid #ff0000;
     }
     details[open] summary {
         color: #ff0000;
+        
     }
     ::marker{ display:none; } summary{ list-style: none }
     .slider{
@@ -425,8 +428,9 @@ body._touch .menu_arrow{
         padding: 30px 10px;
         width:850px;
         height: auto;
-        box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 7px rgba(0, 0, 0, 0.3);
         border-radius: 8px;
+        border:1px solid #777;
         padding: 16px;
         margin-left: auto;
         margin-right: auto;
@@ -505,7 +509,7 @@ body._touch .menu_arrow{
         border-right: 2px solid #777;
         height:auto;
         padding-right: 20px;
-        margin-top:30px;
+        margin-top:10px;
     }
 .slider22{
     width:100%;
@@ -523,7 +527,7 @@ body._touch .menu_arrow{
     line-height: 0.95;
   }
   .parB1{
-    margin-top:150px;
+    margin-top:110px;
     margin-bottom:15px;
     color:#fff;
     font-size:25px;
@@ -534,12 +538,23 @@ body._touch .menu_arrow{
     margin-bottom:15px;
     color:#fff;
     font-size:15px;
-    line-height: 0.95;
     text-decoration:underline;
   }
+  .parB3{
+    margin-top:0px;
+    color:#fff;
+    font-size:15px;
+    line-height: 0.90;
+  }
+  .intro_par4{
+    margin:0;
+    font-size:15px;
+    color:#ff0000;
+
+}
   .parb{
     color:#aaaaaa;
-    font-size:15px;
+    font-size:13px;
    
   }
   .container2{
@@ -548,26 +563,75 @@ body._touch .menu_arrow{
     margin-right:auto;
 
   }
+  .container22{
+    width:75%;
+    margin-left:auto;
+    margin-right:auto;
+    
+  }
   .form_item{
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 10px 0px;
   }
   .form_input{
     height:50px;
     border-radius:5px;
-    width:60%;
+    width:100%;
     font-size:18px;
     
   }
+
+  .form1 div {
+    position: relative;
+ 
+    margin-top:10px;
+}
+.form1{
+margin-top:30px;
+}
+
+ .form1 div input {
+    background: transparent;
+    border: 1px solid #fff;
+}
+.form1 div textarea {
+    background: transparent;
+    border: 1px solid #fff;
+}
   .form_input._error{
     box-shadow:0 0 15px #ff0000;
   }
-  .checkbox._error .checkbox_label::before{
-    box-shadow:0 0 15px #ff0000;
-  }
+ 
   textarea.form_input{
-    min-height:120px;
+    min-height:100px;
   }
-
+ 
+  .form_button{
+    margin-top: 20px;
+    margin-bottom:40px;
+    display: inline-block;
+    width: 100%;
+    background: transparent;
+    padding: 8px;
+    color:#ff0000;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+  }
+footer{
+    margin-top:0;
+    height:130px;
+    background: linear-gradient(to right,#000 ,#050c37);
+}
+.hr-line1 {
+    margin-top:0px;
+    margin-bottom:20px;
+    padding: 0;
+    height: 0;
+    border: none;
+    border-top: 1px solid #aaaaaa;
+}
 @media  (max-width:800px){
     .intro{
         max-height:70vh;
@@ -897,5 +961,8 @@ body._touch .menu_arrow{
             width:170px;
             padding-bottom:10px;
             border:1px solid #777;
+          }
+          .parB1{
+            margin-top:20px;
           }
 }

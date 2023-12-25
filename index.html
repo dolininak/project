@@ -78,7 +78,7 @@
                 <div class="col-md-6 ">
             <h1 class="intro_title ">Поддержка сайтов на Drupal</h1>
             <p class="intro_par">Сопровождение и поддержка сайтов на CMS Drupal любых версий и запущенности</p>
-            <p class="d-flex justify-content-center"><a href="#" class="button1">Тарифы</a></p></div>
+            <p class="d-flex justify-content-center"><a href="#p1" class="button1">Тарифы</a></p></div>
             <div class ="row d-flex">
             
              <div class="vl1">
@@ -262,7 +262,7 @@
         <h2><b> Тарифы </b></h2>
         
 </div>
-    <div class="card-container2">
+    <div class="card-container2" id="p1">
         <div class="row d-flex justify-content-center gap-5">
             <div class="card col-md-2 col-9">
                 <div class="zagcard"><b>Стартовый</b></div>
@@ -622,34 +622,33 @@
 </div>
 <div class="forma">
     <div class="container2 d-flex row">
-        <div class="col-4">
+        <div class="col-md-4 col-12">
             <div class="parB"> Оставить заявку на поддержку сайта </div>
             <div class="parb">Срочно нужна поддержка сайта? Ваша команда не успевает справится самостоятельно или предыдущий подрядчик не справился с работой? Тогда вам точно к нам. Просто оставьте заявку и наш менеджер свяжется с вами!</div>
             <div class="parB1"> 8 800 222-26-73 </div>
             <div class="parB2"> info@drupal-coder.ru </div>
         </div>
-        <div class="form col-8">
+        <div class=" col-md-3 col-12"></div>
+        <div class="form1 col-md-5 col-12">
             <form action="#" id="form" class="form_body">
                 <div class="form_item">
-                    <label for="formName"  class="form_label"></label>
                     <input id ='formName' placeholder="Ваше имя" type="text" name="name" class="form_input _req">
                 </div>
                 <div class="form_item">
-                    <label for="formTel"  class="form_label"></label>
                     <input id ='formTel' placeholder="Телефон" type="text" name="tel" class="form_input _req _tel">
                 </div>
                 <div class="form_item">
-                    <label for="formEmail"  class="form_label"></label>
                     <input id ='formEmail' placeholder="E-mail" type="text" name="email" class="form_input _req _email">
                 </div>
                 <div class="form_item">
-                    <label for="formMessage"  class="form_label"></label>
                     <textarea id ='formMessage' placeholder="Ваш комментарий"  name="message" class="form_input"></textarea>
                 </div>
                 <div class="form_item">
-                    <input id ='formAgreement' placeholder="E-mail" type="checkbox" name="agreement" class="checkbox_input _req">
-                    <label for="formAgreement"  class="checkbox_label">Отправляя заявку, я даю согласие на обработку своих персональных данных </label>
-                    
+                    <div class="d-flex row">
+                    <input id ='formAgreement'  type="checkbox" name="agreement" class="col-1 checkbox_input _req">
+                    <div class="col-1"></div>
+                    <label for="formAgreement"  class="col-10 checkbox_label"> <div class="parB3">Отправляя заявку, я даю согласие на <span class="intro_par4"> обработку своих персональных данных</span> </div></label>
+                </div>
                 </div>
                 <button type="submit" class="form_button">Свяжитесь с нами</button>
             </form>
@@ -657,5 +656,12 @@
         </div>
     </div>
 </div>
+<footer>
+    <div class="hr-line1"></div>
+    <div class="container22">
+        <div class="parb"> Проект ООО "Инитлаб", Краснодар, Россия.</div>
+        <div class="parb">  Drupal является зарегистрированной торговой маркой Dries Buytaert</div>
+    </div>
+</footer>
 </body>
 </html>

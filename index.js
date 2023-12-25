@@ -13,7 +13,7 @@ $(document).ready(function(){
         adaptiveHeight:false,
         slidesToShow:1,
         slidesToScroll:1,
-        speed:1000,
+        speed:0,
     });
 });
 $(document).ready(function(){
@@ -73,14 +73,6 @@ async function formSend(e){
             method:'POST',
             body:formData
         });
-        if (response.ok){
-            let result =await response.json();
-            alert(result.message);
-            form.reset();
-        }
-        else{
-            alert('Ошибка')
-        }
     }
     else {
         alert('Заполните обязательные поля');
